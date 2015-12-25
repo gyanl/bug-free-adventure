@@ -23,17 +23,25 @@ public class AddClass extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_class);
         //adding string res to java
-        nouns = getResources().getStringArray(R.array.nouns);
-        adje = getResources().getStringArray(R.array.adjec);
+        nouns = getResources().getStringArray(R.array.adjec);
+        adje = getResources().getStringArray(R.array.nouns);
         //initialise counters
         noun_count = adjec_count = 0;
         //adding text view
         name_view = (TextView) findViewById(R.id.name_gen);
+
+
+        android.graphics.Typeface custom_font = android.graphics.Typeface.createFromAsset(getAssets(),  "fonts/LeagueSpartan-Bold.otf");
+
+        name_view.setTypeface(custom_font);
+
+
+
         mButton1 = (Button) findViewById(R.id.button1);
         mButton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                name_view.setText(nouns[noun_count%3]+adje[adjec_count%4]);
+                name_view.setText(nouns[noun_count%4]+adje[adjec_count%4]);
                 noun_count++;
 
             }
@@ -43,7 +51,7 @@ public class AddClass extends AppCompatActivity {
         mButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                name_view.setText(nouns[noun_count%3]+adje[adjec_count%4]);
+                name_view.setText(nouns[noun_count%4]+adje[adjec_count%4]);
                 adjec_count++;
             }
         });
