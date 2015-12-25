@@ -23,8 +23,8 @@ public class AddClass extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_class);
         //adding string res to java
-        nouns = getResources().getStringArray(R.array.adjec);
-        adje = getResources().getStringArray(R.array.nouns);
+        nouns = getResources().getStringArray(R.array.nouns);
+        adje = getResources().getStringArray(R.array.adjec);
         //initialise counters
         noun_count = adjec_count = 0;
         //adding text view
@@ -41,8 +41,8 @@ public class AddClass extends AppCompatActivity {
         mButton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                name_view.setText(nouns[noun_count%4]+adje[adjec_count%4]);
                 noun_count++;
+                name_view.setText(adje[adjec_count]+nouns[noun_count%4]);
 
             }
         });
@@ -51,8 +51,8 @@ public class AddClass extends AppCompatActivity {
         mButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                name_view.setText(nouns[noun_count%4]+adje[adjec_count%4]);
                 adjec_count++;
+                name_view.setText(adje[adjec_count%4]+nouns[noun_count]);
             }
         });
 

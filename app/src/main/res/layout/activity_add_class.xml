@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/colorAccent"
     android:gravity="center">
     <TextView
         android:id="@+id/name_gen"
@@ -15,7 +16,7 @@
         android:layout_gravity="center"
         android:fontFamily="League Spartan"
         android:textSize="36dp"
-        android:textColor="@color/colorAccent"
+        android:textColor="@color/white"
         android:textIsSelectable="true" />
     <LinearLayout
         android:layout_width="wrap_content"
@@ -23,20 +24,20 @@
         android:orientation="horizontal"
         android:padding="24dp">
         <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/adjective"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/colorAccent" />
+        <Button
             android:id="@+id/button1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="@string/noun"
-            android:backgroundTint="@color/colorAccent"
-            android:textColor="@color/white" />
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/adjective"
-            android:backgroundTint="@color/colorAccent"
-            android:textColor="@color/white" />
+            android:backgroundTint="@color/white"
+            android:textColor="@color/colorAccent" />
 
     </LinearLayout>
 </LinearLayout>
