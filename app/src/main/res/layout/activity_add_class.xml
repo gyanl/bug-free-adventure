@@ -13,7 +13,10 @@
         android:layout_height="wrap_content"
         android:text="@string/add_class_head"
         android:layout_gravity="center"
-        android:textStyle="bold|italic"/>
+        android:fontFamily="League Spartan"
+        android:textSize="36dp"
+        android:textColor="@color/colorAccent"
+        android:textIsSelectable="true" />
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -24,12 +27,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="nouns"/>
+            android:text="@string/noun"
+            android:backgroundTint="@color/colorAccent"
+            android:textColor="@color/white" />
         <Button
             android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="adjec"/>
+            android:text="@string/adjective"
+            android:backgroundTint="@color/colorAccent"
+            android:textColor="@color/white" />
 
     </LinearLayout>
 </LinearLayout>
